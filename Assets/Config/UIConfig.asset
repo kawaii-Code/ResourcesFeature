@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cffbe0b4d7784f46ad97e1c95da86e98, type: 3}
+  m_Name: UIConfig
+  m_EditorClassIdentifier: 
+  AddButtons:
+  - Type: 0
+    Prefab: {fileID: 4128217844888233031, guid: 730085b2c59a04e4bba41c12edf645df, type: 3}
+  - Type: 1
+    Prefab: {fileID: 8638466715349624254, guid: b8a8a063a24c9ef408515e99457912e5, type: 3}
+  - Type: 2
+    Prefab: {fileID: 4128217844888233031, guid: 8296cf499cf2f1041aeee3c6571d4d04, type: 3}
+  SpendButtons:
+  - Type: 0
+    Prefab: {fileID: 1456797403483590068, guid: 0e700f09f2c77994f9e190065aa585ff, type: 3}
+  - Type: 2
+    Prefab: {fileID: 830403689026814902, guid: d4d226ece1cbf7c4886c7391862b427b, type: 3}
+  ResourceViews:
+  - Type: 0
+    Prefab: {fileID: 2173913013472938748, guid: 347bd974608048d4e8c0879e0f541f07, type: 3}
+  - Type: 1
+    Prefab: {fileID: 6680359370977429956, guid: f0a22834478827e40b0ce24a7ca46281, type: 3}
+  - Type: 2
+    Prefab: {fileID: 822931698748244199, guid: 663cee9f6af3b7a45a2e7f9f6968866c, type: 3}
