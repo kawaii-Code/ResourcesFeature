@@ -14,20 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddButtons:
   - Type: 0
-    Prefab: {fileID: 4128217844888233031, guid: 730085b2c59a04e4bba41c12edf645df, type: 3}
+    Prefab: {fileID: 7529560681631380311, guid: 730085b2c59a04e4bba41c12edf645df, type: 3}
   - Type: 1
-    Prefab: {fileID: 8638466715349624254, guid: b8a8a063a24c9ef408515e99457912e5, type: 3}
+    Prefab: {fileID: 29376525324956202, guid: 71a54f46460ea5c4fa02495a6def8bf9, type: 3}
   - Type: 2
-    Prefab: {fileID: 4128217844888233031, guid: 8296cf499cf2f1041aeee3c6571d4d04, type: 3}
+    Prefab: {fileID: 8117854817922090811, guid: 8296cf499cf2f1041aeee3c6571d4d04, type: 3}
   SpendButtons:
   - Type: 0
-    Prefab: {fileID: 1456797403483590068, guid: 0e700f09f2c77994f9e190065aa585ff, type: 3}
+    Prefab: {fileID: 4706033529714082728, guid: 0e700f09f2c77994f9e190065aa585ff, type: 3}
   - Type: 2
-    Prefab: {fileID: 830403689026814902, guid: d4d226ece1cbf7c4886c7391862b427b, type: 3}
+    Prefab: {fileID: 8116934950291316169, guid: d4d226ece1cbf7c4886c7391862b427b, type: 3}
+  - Type: 1
+    Prefab: {fileID: 4953533988929169398, guid: a7103976ed6262d478ffd67f1ada0a16, type: 3}
   ResourceViews:
   - Type: 0
-    Prefab: {fileID: 2173913013472938748, guid: 347bd974608048d4e8c0879e0f541f07, type: 3}
+    Prefab: {fileID: 3063991520198019135, guid: 347bd974608048d4e8c0879e0f541f07, type: 3}
   - Type: 1
-    Prefab: {fileID: 6680359370977429956, guid: f0a22834478827e40b0ce24a7ca46281, type: 3}
+    Prefab: {fileID: 2928507703709697404, guid: 3f0d178a746a7014ba538075559814b5, type: 3}
   - Type: 2
     Prefab: {fileID: 822931698748244199, guid: 663cee9f6af3b7a45a2e7f9f6968866c, type: 3}

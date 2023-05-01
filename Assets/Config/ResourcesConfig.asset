@@ -18,4 +18,4 @@ MonoBehaviour:
   - Type: 1
     InitialAmount: 0
   - Type: 2
-    InitialAmount: 0
+    InitialAmount: 25
