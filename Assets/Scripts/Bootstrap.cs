@@ -13,7 +13,9 @@ namespace Resources
     {
         [SerializeField] private ResourcesConfig _resourceConfig;
         [SerializeField] private UIConfig _uiConfig;
-        [SerializeField] private Transform _uiRoot;
+        [SerializeField] private Transform _resourceViewRoot;
+        [SerializeField] private Transform _addButtonRoot;
+        [SerializeField] private Transform _spendButtonRoot;
 
         private IResourceService _resourceService;
         private IConfigService _configService;
@@ -51,7 +53,12 @@ namespace Resources
 
         private void InitializeUI()
         {
-            IUIFactory uiFactory = new UIFactory(_resourceService, _configService, _uiRoot, _uiRoot, _uiRoot);
+            IUIFactory uiFactory = new UIFactory(
+                _resourceService, 
+                _configService,
+                _addButtonRoot,
+                _spendButtonRoot,
+                _resourceViewRoot);
             AllResourcesView resourcesView = new(_resourceService, uiFactory);
             
             CreateTestUI(uiFactory, resourcesView);
@@ -62,13 +69,12 @@ namespace Resources
         private static void CreateTestUI(IUIFactory uiFactory, AllResourcesView resourcesView)
         {
             uiFactory.CreateAddButton(ResourceType.Gold);
-            uiFactory.CreateAddButton(ResourceType.Iron);
-            uiFactory.CreateAddButton(ResourceType.Gems);
+            uiFactory.CreateAddButton(ResourceType.Key);
             
             uiFactory.CreateSpendButton(ResourceType.Gold);
-            uiFactory.CreateSpendButton(ResourceType.Gems);
+            uiFactory.CreateSpendButton(ResourceType.Gem);
             
-            resourcesView.Display(ResourceType.Gold, ResourceType.Gems);
+            resourcesView.Display(ResourceType.Gold, ResourceType.Gem);
         }
     }
 }

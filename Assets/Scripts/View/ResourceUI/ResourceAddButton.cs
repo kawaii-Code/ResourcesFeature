@@ -1,5 +1,6 @@
 ﻿using Resources.Data;
 using Resources.Services.ResourceService;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ namespace Resources.View
     public class ResourceAddButton : MonoBehaviour
     {
         [SerializeField] private Button _button;
+        [SerializeField] private TextMeshProUGUI _buttonText;
+        [SerializeField] private string _addText;
         [SerializeField] private ResourceType _type;
         [SerializeField] private int _amount;
         
@@ -16,6 +19,7 @@ namespace Resources.View
         public void Construct(IResourceStorage resourceStorage)
         {
             _resourceStorage = resourceStorage;
+            _buttonText.text = $"{_addText}{_amount}";
             _button.onClick.AddListener(Add);
         }
 

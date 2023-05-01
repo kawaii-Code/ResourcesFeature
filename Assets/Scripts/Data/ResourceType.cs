@@ -3,7 +3,7 @@
     public enum ResourceType
     {
         Gold,
-        Iron,
-        Gems
+        Key,
+        Gem
     }
 }

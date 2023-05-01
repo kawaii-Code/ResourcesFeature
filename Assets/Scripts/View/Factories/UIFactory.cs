@@ -9,20 +9,20 @@ namespace Resources.View
     {
         private readonly IResourceService _resourceService;
         private readonly IConfigService _configService;
-        private readonly Transform _buyButtonParent;
+        private readonly Transform _addButtonParent;
         private readonly Transform _spendButtonParent;
         private readonly Transform _resourceViewParent;
 
         public UIFactory(
             IResourceService resourceService,
             IConfigService configService,
-            Transform buyButtonParent,
+            Transform addButtonParent,
             Transform spendButtonParent,
             Transform resourceViewParent)
         {
             _resourceService = resourceService;
             _configService = configService;
-            _buyButtonParent = buyButtonParent;
+            _addButtonParent = addButtonParent;
             _spendButtonParent = spendButtonParent;
             _resourceViewParent = resourceViewParent;
         }
@@ -30,7 +30,7 @@ namespace Resources.View
         public ResourceAddButton CreateAddButton(ResourceType buyType)
         {
             GameObject buttonPrefab = _configService.GetAddButtonPrefabFor(buyType);
-            ResourceAddButton button = Object.Instantiate(buttonPrefab, _buyButtonParent).GetComponent<ResourceAddButton>();
+            ResourceAddButton button = Object.Instantiate(buttonPrefab, _addButtonParent).GetComponent<ResourceAddButton>();
             button.Construct(_resourceService);
             
             return button;
