@@ -19,8 +19,11 @@ namespace Resources.Config
 
         private void OnValidate()
         {
-            if (InitialData.GroupBy(resource => resource.Type).Count() != InitialData.Length)
+            if (CountOfDifferentTypes() != InitialData.Length)
                 throw new ArgumentException("Two resources of the same type found!");
         }
+
+        private int CountOfDifferentTypes() =>
+            InitialData.GroupBy(resource => resource.Type).Count();
     }
 }

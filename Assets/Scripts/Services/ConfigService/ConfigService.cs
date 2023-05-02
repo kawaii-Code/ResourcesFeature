@@ -2,7 +2,7 @@
 using System.Linq;
 using Resources.Config;
 using Resources.Data;
-using UnityEngine;
+using Resources.View;
 
 namespace Resources.Services.ConfigService
 {
@@ -20,11 +20,11 @@ namespace Resources.Services.ConfigService
         public Dictionary<ResourceType, ResourceData> LoadInitialResourceValues() =>
             _resourcesConfig.InitialData.ToDictionary(resource => resource.Type, resource => new ResourceData(resource.InitialAmount));
         
-        public GameObject GetAddButtonPrefabFor(ResourceType addType) =>
+        public AddResourceButton GetAddButtonPrefabFor(ResourceType addType) =>
             _uiConfig.AddButtons.First(button => button.Type == addType).Prefab;
-        public GameObject GetSpendButtonPrefabFor(ResourceType spendType) =>
+        public SpendResourceButton GetSpendButtonPrefabFor(ResourceType spendType) =>
             _uiConfig.SpendButtons.First(button => button.Type == spendType).Prefab;
-        public GameObject GetResourceViewPrefabFor(ResourceType type) =>
+        public ResourceView GetResourceViewPrefabFor(ResourceType type) =>
             _uiConfig.ResourceViews.First(view => view.Type == type).Prefab;
     }
 }

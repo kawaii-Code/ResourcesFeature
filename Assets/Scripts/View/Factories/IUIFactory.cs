@@ -4,8 +4,8 @@ namespace Resources.View
 {
     public interface IUIFactory
     {
-        ResourceAddButton CreateAddButton(ResourceType buyType);
-        ResourceSpendButton CreateSpendButton(ResourceType spendType);
+        AddResourceButton CreateAddButton(ResourceType buyType);
+        SpendResourceButton CreateSpendButton(ResourceType spendType);
         ResourceView CreateResourceView(ResourceType type);
     }
 }

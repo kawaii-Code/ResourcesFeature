@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Resources.View
 {
-    public class ResourceSpendButton : MonoBehaviour
+    public class SpendResourceButton : MonoBehaviour
     {
         [SerializeField] private Button _button;
         [SerializeField] private TextMeshProUGUI _buttonText;

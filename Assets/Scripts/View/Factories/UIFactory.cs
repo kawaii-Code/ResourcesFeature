@@ -27,19 +27,19 @@ namespace Resources.View
             _resourceViewParent = resourceViewParent;
         }
 
-        public ResourceAddButton CreateAddButton(ResourceType buyType)
+        public AddResourceButton CreateAddButton(ResourceType buyType)
         {
-            GameObject buttonPrefab = _configService.GetAddButtonPrefabFor(buyType);
-            ResourceAddButton button = Object.Instantiate(buttonPrefab, _addButtonParent).GetComponent<ResourceAddButton>();
+            AddResourceButton buttonPrefab = _configService.GetAddButtonPrefabFor(buyType);
+            AddResourceButton button = Object.Instantiate(buttonPrefab, _addButtonParent);
             button.Construct(_resourceService);
             
             return button;
         }
 
-        public ResourceSpendButton CreateSpendButton(ResourceType spendType)
+        public SpendResourceButton CreateSpendButton(ResourceType spendType)
         {
-            GameObject buttonPrefab = _configService.GetSpendButtonPrefabFor(spendType);
-            ResourceSpendButton button = Object.Instantiate(buttonPrefab, _spendButtonParent).GetComponent<ResourceSpendButton>();
+            SpendResourceButton buttonPrefab = _configService.GetSpendButtonPrefabFor(spendType);
+            SpendResourceButton button = Object.Instantiate(buttonPrefab, _spendButtonParent);
             button.Construct(_resourceService, _resourceService);
             
             return button;
@@ -47,7 +47,7 @@ namespace Resources.View
 
         public ResourceView CreateResourceView(ResourceType type)
         {
-            GameObject viewPrefab = _configService.GetResourceViewPrefabFor(type);
+            ResourceView viewPrefab = _configService.GetResourceViewPrefabFor(type);
             ResourceView view = Object.Instantiate(viewPrefab, _resourceViewParent).GetComponent<ResourceView>();
             
             return view;
